@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="context1" targetRuntime="MyBatis3">
+        <plugin type="cn.healthmall.iot.mybatisgenrator.LifeHallPlugin">
+            <property name="servicePackage" value="cn.healthmall.iot.device.service"/>
+            <property name="targetProject"
+                      value="F:\\neno-work2\\healthmall-iot3\\iot-device-mgmt\\src\\main\\java"/>
+        </plugin>
+
+        <commentGenerator type="cn.healthmall.iot.mybatisgenrator.LifeHallCommentGenerator">
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/healthmall_iot?useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="root"
+                        password="123456"/>
+        <javaModelGenerator targetPackage="cn.healthmall.iot.device.module"
+                            targetProject="F:\\neno-work2\\healthmall-iot3\\iot-device-mgmt\\src\\main\\java">
+        	<property name="rootClass" value="cn.healthmall.rose.mybatis.base.EntityBase"></property>
+       	</javaModelGenerator>
+        <sqlMapGenerator targetPackage="cn.healthmall.iot.device.dao.mapper"
+                         targetProject="F:\\neno-work2\\healthmall-iot3\\iot-device-mgmt\\src\\main\\java"/>
+        <javaClientGenerator targetPackage="cn.healthmall.iot.device.dao"
+                             targetProject="F:\\neno-work2\\healthmall-iot3\\iot-device-mgmt\\src\\main\\java"
+                             type="XMLMAPPER"/>
+
+    	<table tableName="t_test_info" domainObjectName="TestInfo" alias="_TestInfo">
+			<columnOverride column="id" property="id"></columnOverride>
+			
+			<columnOverride column="name" property="name"></columnOverride>
+			
+			<columnOverride column="delete_flag" property="deleteFlag"></columnOverride>
+			<columnOverride column="create_time" property="createTime"></columnOverride>
+			<columnOverride column="create_by" property="createBy"></columnOverride>
+			<columnOverride column="update_time" property="updateTime"></columnOverride>
+			<columnOverride column="update_by" property="updateBy"></columnOverride>
+    	</table>   
+    	
+    </context>
+</generatorConfiguration>

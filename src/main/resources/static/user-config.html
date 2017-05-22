@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>主页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- basic styles -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="#" class="navbar-brand">
+						<small>
+							<i class="icon-leaf"></i>
+							我的工具
+						</small>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>欢迎光临,</small>
+									cjk
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										退出
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar" id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+					<div class="sidebar-shortcuts" id="sidebar-shortcuts"></div><!-- #sidebar-shortcuts -->
+
+					<ul class="nav nav-list">
+						<li class="active">
+							<a href="user-config.html">
+								<i class="icon-cog"></i>
+								<span class="menu-text">配置中心 </span>
+							</a>
+						</li>
+						<li>
+							<a href="mybatis-generator.html">
+								<i class="icon-bolt"></i>
+								<span class="menu-text">MyBatis代码生成 </span>
+							</a>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+							<li class="active">配置中心</li>
+						</ul><!-- .breadcrumb -->
+					</div>
+					
+					<div class="page-content">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="tabbable tabs-left">
+									<ul class="nav nav-tabs" id="myTab3">
+										<li class="active">
+											<a data-toggle="tab" href="#home">
+												<i class="blue icon-user bigger-110"></i>
+												HOME
+											</a>
+										</li>
+	
+										<li>
+											<a data-toggle="tab" href="#project">
+												<i class="green icon-folder-open-alt bigger-110"></i>
+												项目
+											</a>
+										</li>
+	
+										<li>
+											<a data-toggle="tab" href="#datasource">
+												<i class="pink icon-cogs bigger-110"></i>
+												数据源
+											</a>
+										</li>
+										
+										<li>
+											<a data-toggle="tab" href="#workspace">
+												<i class="yellow icon-folder-close-alt bigger-110"></i>
+												工作空间
+											</a>
+										</li>
+									</ul>
+	
+									<div class="tab-content" style="height:500px;">
+										<div id="home" class="tab-pane in active">
+											<div class="col-xs-5">
+												<div class="profile-user-info profile-user-info-striped">
+													<div class="profile-info-row">
+														<div class="profile-info-name"> username </div>
+	
+														<div class="profile-info-value">
+															<span class="editable" id="username">cjk</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+	
+										<div id="project" class="tab-pane">
+											<button id="project-add" class="btn btn-primary" data-toggle="modal" data-target="#project-add-modal" data-backdrop="false">新增</button>
+											<div class="modal fade" id="project-add-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											    <div class="modal-dialog">
+											        <div class="modal-content">
+											            <div class="modal-header">
+											                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											                <h4 class="modal-title" id="myModalLabel">新增</h4>
+											            </div>
+											            <div class="modal-body">
+															<form class="form-horizontal" role="form">
+																<div class="form-group">
+																	<label for="project-name" class="col-xs-2 control-label">名称</label>
+																	<div class="col-xs-10">
+																		<input id="project-name" name="name" type="text" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="target-package" class="col-xs-2 control-label">项目包名</label>
+																	<div class="col-xs-10">
+																		<input id="target-package" type="text" name="targetPackage" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="target-project-suffix" class="col-xs-2 control-label">项目名</label>
+																	<div class="col-xs-10">
+																		<input type="text" id="target-project-suffix" name="targetProjectSuffix" class="form-control" />
+																	</div>
+																</div>
+															</form>
+											            </div>
+											            <div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+												            <button id="project-add-submit" type="button" class="btn btn-primary">提交</button>
+											            </div>
+											        </div><!-- /.modal-content -->
+											    </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="table-responsive">
+												<table id="project-table" class="table table-striped table-bordered table-hover">
+													<thead>
+														<tr>
+															<th>名称</th>
+															<th>项目包名</th>
+															<th class="hidden-480">项目名</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+										</div>
+	
+										<div id="datasource" class="tab-pane">
+											<button id="datasource-add" class="btn btn-primary" data-toggle="modal" data-target="#datasource-add-modal" data-backdrop="false">新增</button>
+											<div class="modal fade" id="datasource-add-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											    <div class="modal-dialog">
+											        <div class="modal-content">
+											            <div class="modal-header">
+											                <button type="button" class="close" data-toggle="modal" data-dismiss="modal" aria-hidden="true">&times;</button>
+											                <h4 class="modal-title" id="myModalLabel">新增</h4>
+											            </div>
+											            <div class="modal-body">
+															<form class="form-horizontal" role="form">
+																<div class="form-group">
+																	<label for="datasource-name" class="col-xs-2 control-label">名称</label>
+																	<div class="col-xs-10">
+																		<input id="datasource-name" name="name" type="text" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="target-connection" class="col-xs-2 control-label">URL</label>
+																	<div class="col-xs-10">
+																		<input id="target-connection" type="text" name="targetConnection" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="datasource-username" class="col-xs-2 control-label">用户名</label>
+																	<div class="col-xs-10">
+																		<input type="text" id="datasource-username" name="username" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="datasource-password" class="col-xs-2 control-label">密码</label>
+																	<div class="col-xs-10">
+																		<input type="text" id="datasource-password" name="password" class="form-control" />
+																	</div>
+																</div>
+															</form>
+											            </div>
+											            <div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+												            <button id="datasource-add-submit" type="button" class="btn btn-primary">提交</button>
+											            </div>
+											        </div><!-- /.modal-content -->
+											    </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="table-responsive">
+												<table id="datasource-table" class="table table-striped table-bordered table-hover">
+													<thead>
+														<tr>
+															<th>名称</th>	
+															<th>URL</th>
+															<th>用户名</th>
+															<th>密码</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										
+										<div id="workspace" class="tab-pane">
+											<button id="workspace-add" class="btn btn-primary" data-toggle="modal" data-target="#workspace-add-modal" data-backdrop="false">新增</button>
+											<div class="modal fade" id="workspace-add-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											    <div class="modal-dialog">
+											        <div class="modal-content">
+											            <div class="modal-header">
+											                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											                <h4 class="modal-title" id="myModalLabel">新增</h4>
+											            </div>
+											            <div class="modal-body">
+															<form class="form-horizontal" role="form">
+																<div class="form-group">
+																	<label for="workspace-name" class="col-xs-2 control-label">名称</label>
+																	<div class="col-xs-10">
+																		<input id="workspace-name" name="name" type="text" class="form-control" />
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="target-project" class="col-xs-2 control-label">工作空间</label>
+																	<div class="col-xs-10">
+																		<input id="target-project" type="text" name="targetProject" class="form-control" />
+																	</div>
+																</div>
+															</form>
+											            </div>
+											            <div class="modal-footer">
+															<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+												            <button id="workspace-add-submit" type="button" class="btn btn-primary">提交</button>
+											            </div>
+											        </div><!-- /.modal-content -->
+											    </div><!-- /.modal-dialog -->
+											</div><!-- /.modal -->
+											<div class="table-responsive">
+												<table id="workspace-table" class="table table-striped table-bordered table-hover">
+													<thead>
+														<tr>
+															<th>名称</th>	
+															<th>路径</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- row-end -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="icon-cog bigger-150"></i>
+					</div>
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; 选择皮肤</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> 固定导航条</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> 固定滑动条</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl">切换到左边</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+							<label class="lbl" for="ace-settings-add-container">
+								切换窄屏
+								<b></b>
+							</label>
+						</div>
+					</div>
+				</div><!-- /#ace-settings-container -->
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+	<script type="text/javascript">
+		$(function(){
+			initWorkspaceTbl();
+			initProjectTbl();
+			initDataSource();
+			
+			var $projectAddModal = $("#project-add-modal");
+			var $datasourceAddModal = $("#datasource-add-modal");
+			var $workspaceAddModal = $("#workspace-add-modal");
+			
+			$projectAddModal.on("click", "#project-add-submit", function(){
+				var data = $('form', $projectAddModal).serialize();
+				$.post("generator/addProject", data)
+					.success(function(){
+						$projectAddModal.modal('hide');
+						initProjectTbl();
+					});
+			});
+			
+			$datasourceAddModal.on("click", "#datasource-add-submit", function(){
+				var data = $('form', $datasourceAddModal).serialize();
+				$.post("generator/addDataSource", data)
+					.success(function(){
+						$datasourceAddModal.modal('hide');
+						initDataSource();
+					});
+			});
+			
+			$workspaceAddModal.on("click", "#workspace-add-submit", function(){
+				var data = $('form', $workspaceAddModal).serialize();
+				$.post("generator/addWorkspace", data)
+					.success(function(){
+						$workspaceAddModal.modal('hide');
+						initWorkspaceTbl();
+					});
+			});
+
+			function initWorkspaceTbl(){
+				$.post("generator/getWorkspace").success(function(jsondata){
+					generatorTab($("#workspace-table"), jsondata);
+				});
+			}
+			function initProjectTbl(){
+				$.post("generator/getProjects").success(function(jsondata){
+					generatorTab($("#project-table"), jsondata);
+				});	
+			}
+
+			function initDataSource(){
+				$.post("generator/getDataSource").success(function(jsondata){
+					generatorTab($("#datasource-table"), jsondata);
+				});
+			}
+			function generatorTab($ele, jsondata){
+				var tempArr = ['<tr>', '<td>', '</td>', '</tr>'];
+				var strArr = [];
+				$.each(jsondata, function(index, item){
+					strArr.push(tempArr[0]);
+					for(var i in item){
+						if(item.hasOwnProperty(i)){
+							strArr.push(tempArr[1] + item[i] + tempArr[2]);
+						}
+					}
+					strArr.push(tempArr[3]);
+				});
+				$('tbody', $ele).html(strArr.join('\n'));
+			}
+		});
+	</script>
+</body>
+</html>
+
